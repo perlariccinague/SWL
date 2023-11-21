@@ -1,0 +1,14 @@
+<div class="tabs-block">
+    <?php foreach($this->tabs as $key=>$tab): ?>
+        <div class="tab" <?php echo $this->cssID ?>>
+            <input type="radio" name="tabs" id="tab<?= $key ?>">
+            <label for="tab<?= $key ?>" id="tab<?= $key ?>"> <img src="{{file::<?= $tab->image ?>}}"><span><?= $tab->titel ?></span></label>
+            <div class="tab-content">
+                <p><?= $tab->description ?></p>
+            </div>
+        </div>
+    <?php endforeach; ?>
+</div>
+
+
+

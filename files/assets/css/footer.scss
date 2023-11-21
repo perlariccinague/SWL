@@ -1,0 +1,113 @@
+@import "variables";
+
+#footer {
+  background: url("/files/assets/layout/Footer-grey.svg") center top 0/cover no-repeat;
+  width: 100%;
+}
+
+.footer {
+  padding: 330px 0 80px;
+  .footer-top {
+    margin: 30px auto;
+    padding-top: 125px;
+    img {
+      width: 365px;
+    }
+  }
+}
+
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: white;
+  & > div {
+    width: 30%;
+  }
+  .footer-left, .footer-middle {
+    h2 {
+      font: normal normal 300 22px/26px Inter;
+      border: none;
+    }
+    p {
+      font: normal normal 300 17px/20px Inter;
+      a {
+        color: white;
+        transition: color 250ms;
+        &:hover {
+          color: $türkis;
+        }
+      }
+    }
+  }
+  .footer-middle {
+    .mod_customnav {
+      ul {
+        display: flex;
+        justify-content: space-between;
+        font: normal normal 600 14px/16px Inter;
+        margin: 10px auto;
+        li {
+          padding-right: 16px;
+          &:not(:last-child) {
+            border-right: 2px solid white;
+          }
+          a {
+            color: white;
+            text-transform: uppercase;
+            transition: color 250ms;
+            &:hover {
+              color: $türkis;
+            }
+          }
+          strong {
+            color: $türkis;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+  .footer-right {
+    display: flex;
+    justify-content: right;
+    width: 20%;
+    text-align: right;
+    .mod_customnav {
+      width: 100%;
+      ul {
+        li {
+          padding: 4px 0;
+          font: normal normal 400 17px/33px Inter;;
+          &:not(:last-child) {
+            border-bottom: 1px solid #fff;
+          }
+          a, strong {
+            color: white;
+            transition: color 250ms;
+            text-transform: uppercase;
+            &:hover {
+              color: $türkis;
+            }
+          }
+          strong {
+            color: $türkis;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}
+
+.burg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  img {
+    width: 1150px;
+  }
+}
+
+

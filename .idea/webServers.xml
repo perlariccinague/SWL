@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="a49519eb-f1a4-4954-9c83-59c68340ede0" name="server" url="http://ftp.stadtwerke-leinefelde.de">
+        <fileTransfer rootFolder="/cto413" host="ftp.stadtwerke-leinefelde.de" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
