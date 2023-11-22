@@ -1,0 +1,35 @@
+@import "variables";
+
+.teaser.requirements {
+  .ce_accordionStart.ce_accordion {
+    margin: 20px auto;
+    .toggler {
+      position: relative;
+      padding: 25px 70px;
+      color: white;
+      cursor: pointer;
+      text-transform: uppercase;
+      margin: 15px auto;
+      font: normal normal 600 24px/30px Inter;
+      background: #197560 url("/files/assets/layout/arrow-down-white.svg") no-repeat 2%;
+      background-size: auto 18px;
+      transition: background-color 250ms;
+      &.active {
+        background-image: url("/files/assets//layout/arrow-up-white.svg");
+        background-color: #002D42
+      }
+      &:hover {
+        background-color: #002D42;
+      }
+    }
+    .accordion {
+      .ce_text {
+        margin: 0 auto;
+        padding: 0 70px;
+      }
+    }
+    &:last-child {
+      padding-bottom: 65px;
+    }
+  }
+}

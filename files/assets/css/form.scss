@@ -85,3 +85,79 @@
     }
   }
 }
+
+.privacy .ce_form {
+  max-width: 800px;
+  margin: 20px auto;
+  h2 {
+    text-align: center;
+    color: $green;
+    max-width: 500px;
+    margin: 20px auto;
+  }
+}
+
+.privacy .formbody .widget-text,
+.privacy .formbody .widget-textarea {
+  line-height: 1.5em;
+  padding-bottom: 20px;
+  label {
+    font-size: 17px;
+    margin-bottom: 7px;
+    span {
+      color: $darkblue;
+    }
+  }
+  input, textarea {
+    border: 2px solid #00664f;
+    cursor: pointer;
+    width: 95%;
+    padding: 10px ;
+    outline: none;
+    font: normal normal 300 18px/28px Inter;
+    display: block;
+    transition: background-color 250ms;
+    &:hover {
+      border:2px solid $darkblue;
+    }
+  }
+}
+
+.privacy .formbody .widget-checkbox fieldset {
+  border: none;
+  span {
+    margin-left: -15px;
+    label a {
+      color: $darkblue;
+      transition: color 250ms;
+      &:hover {
+        color: $darkblue;
+      }
+    }
+  }
+}
+
+.privacy .formbody .explanation {
+  font-style: italic;
+  font-size: 15px;
+  line-height: 0.7em;
+  margin-top: 0;
+}
+
+.privacy .formbody .widget-checkbox {
+  font-size: 15px;
+}
+
+/*
+.privacy .formbody input[name="name"],
+.privacy .formbody textarea[name="message"],
+.privacy .formbody input[name="email"],
+.privacy .formbody input[name="telefon"],
+.privacy .formbody input[name="firma"]{
+
+}
+*/
+
+textarea {
+  resize: none;
+}

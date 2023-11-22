@@ -46,3 +46,14 @@ h2 {
     max-width: 100px;
   }
 }
+
+.back-to-top {
+  position: fixed;
+  bottom: 75px;
+  right: 130px;
+  cursor: pointer;
+  z-index: 105;
+  img {
+    width: 70px;
+  }
+}

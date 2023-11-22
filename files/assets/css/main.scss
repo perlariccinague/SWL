@@ -171,11 +171,21 @@
     h2 {
       border-color: $green;
       max-width: 500px;
-      margin: 0 auto;
+      margin: 0 auto 30px;
       color: #00664f;
     }
     p {
       font: normal normal 300 22px/30px Inter;
+      a {
+        color: $darkblue;
+        transition: color 250ms;
+        &:hover {
+          color: $green;
+        }
+      }
+      strong {
+        font-weight: 600;
+      }
     }
   }
 }
@@ -457,6 +467,15 @@
   text-align: left;
 }
 
+.teaser.left {
+  .ce_text {
+    text-align: left;
+    h2 {
+      text-align: center;
+    }
+  }
+}
+
 .privacy {
   margin: 60px auto;
   .ce_text {
@@ -480,6 +499,38 @@
         font-weight: 600;
       }
     }
+  }
+}
+
+.teaser.requirements {
+  .ce_text {
+    text-align: left;
+    margin: 60px auto 40px;
+    padding-bottom: 0;
+    h2 {
+      text-align: center;
+    }
+    h3 {
+      font: normal normal 600 24px/28px Inter;
+      color: $green;
+    }
+    p {
+      strong {
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+      a {
+        color: $darkblue;
+        transition: color 250ms;
+        &:hover {
+          color: $green;
+        }
+      }
+    }
+  }
+  h3.ce_headline {
+    font: normal normal 600 24px/28px Inter;
+    margin: 30px auto;
   }
 }
 
