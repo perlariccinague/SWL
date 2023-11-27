@@ -112,7 +112,7 @@
     border: 2px solid #00664f;
     cursor: pointer;
     width: 95%;
-    padding: 10px ;
+    padding: 6px 10px ;
     outline: none;
     font: normal normal 300 18px/28px Inter;
     display: block;
@@ -123,6 +123,7 @@
   }
 }
 
+.privacy .formbody .widget-radio fieldset,
 .privacy .formbody .widget-checkbox fieldset {
   border: none;
   span {
@@ -137,27 +138,56 @@
   }
 }
 
+.privacy .formbody .widget-radio fieldset {
+  margin-left: -13px;
+  span {
+    margin-left: 0;
+  }
+}
+
 .privacy .formbody .explanation {
   font-style: italic;
   font-size: 15px;
-  line-height: 0.7em;
   margin-top: 0;
+}
+
+.privacy .contact .formbody .explanation {
+  color: $green;
+  p {
+    strong {
+      color: black;
+    }
+    a {
+      color: $green;
+    }
+  }
+  &.description {
+    color: black;
+  }
 }
 
 .privacy .formbody .widget-checkbox {
   font-size: 15px;
 }
 
-/*
-.privacy .formbody input[name="name"],
-.privacy .formbody textarea[name="message"],
-.privacy .formbody input[name="email"],
-.privacy .formbody input[name="telefon"],
-.privacy .formbody input[name="firma"]{
-
-}
-*/
-
 textarea {
   resize: none;
+}
+
+.privacy .widget-submit {
+  .submit {
+    background: $green;
+    color: white;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    clip-path: polygon(100% 0, 100% 80%, 95% 100%, 0 100%, 0 0);
+    position: relative;
+    outline: none;
+    border: 0;
+    font: normal normal 500 20px/24px Inter;
+    transition: background-color 250ms;
+    &:hover {
+      background-color: $darkblue;
+    }
+  }
 }

@@ -14,7 +14,7 @@
   z-index: 5;
   position: absolute;
   right: -450px;
-  top: 23vw;
+  top: 45vh;
   transform: translateY(-50%);
   width: 491px;
   transition: right 250ms;
@@ -82,8 +82,11 @@
 
 .call-button {
   position: absolute;
-  top: 18vw;
-  left: 18vw;
+  top: 40vh;
+  left: 50%;
+  width: 90%;
+  max-width: $max-width;
+  transform: translateX(-50%);
   z-index: 1;
   img {
     width: 180px;
@@ -531,6 +534,51 @@
   h3.ce_headline {
     font: normal normal 600 24px/28px Inter;
     margin: 30px auto;
+  }
+}
+
+iframe {
+  width: 100%;
+  height: 60vh;
+}
+
+@media screen and (max-width: 1100px) {
+  .call-button {
+    top: 65vh;
+    img {
+      width: 130px;
+    }
+  }
+  .header-image {
+    height: 100vh;
+    img {
+      height: 100vh;
+    }
+  }
+  .box-block .box {
+    width: 100%;
+    padding: 15px 13px;
+  }
+  .teaser {
+    .ce_text {
+      padding-bottom: 0;
+      margin: 40px auto;
+    }
+  }
+  .image-left, .teaser-right {
+    width: 100%;
+  }
+  .teaser-right .ce_text {
+    width: 90%;
+    margin: 30px auto;
+    max-width: $max-width;
+  }
+  .video {
+    padding: 0;
+    width: 100%;
+  }
+  .sticky-box .ce_text {
+    top: 70vh;
   }
 }
 

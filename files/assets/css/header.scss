@@ -81,3 +81,27 @@
     }
   }
 }
+
+@media screen and (max-width: 1400px) {
+  .bg-header {
+    height: 30vh;
+    transform: rotate(4.5deg) translate(-50vw, -45vh);
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .header {
+    .header-top {
+      justify-content: center;
+      .header-left {
+        display: none;
+      }
+    }
+    .header-bottom {
+      justify-content: center;
+    }
+  }
+  .bg-header {
+    height: 25vh;
+  }
+}
