@@ -20,7 +20,7 @@
   z-index: 1;
 }
 
-.header {
+.header, .header-error {
   z-index: 2;
   position: relative;
   .header-top {
@@ -54,7 +54,7 @@
         }
       }
     }
-    .logo-header a {
+    .logo-header a, .ce_image.logo-error.block {
       padding: 30px 65px;
       display: flex;
       background: transparent linear-gradient(180deg, #07112B 0%, #00664F 100%) no-repeat;
@@ -80,6 +80,21 @@
       }
     }
   }
+}
+
+.header-error {
+  .header-top {
+    display: flex;
+    justify-content: end;
+    width: 90%;
+    max-width: $max-width;
+    margin: 0 auto;
+  }
+}
+
+
+.error #header{
+  position: relative;
 }
 
 @media screen and (max-width: 1400px) {
