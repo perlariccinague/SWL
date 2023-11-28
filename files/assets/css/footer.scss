@@ -102,14 +102,14 @@
 }
 
 .burg {
-  /*position: absolute;
-  top: 0;
-  right: 0;*/
-  top: 60px;
   position: relative;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: end;
   img {
-   /* width: 1150px;*/
-    width: 100%;
+    width: 1150px;
   }
 }
 
@@ -125,7 +125,7 @@
     }
   }
   .burg {
-    top: 14vh;
+    top: 100px;
   }
 }
 

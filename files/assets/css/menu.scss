@@ -81,3 +81,19 @@
     }
   }
 }
+
+@media screen and (max-width: 1100px) {
+  .mobile_menu_active {
+    overflow-x: hidden;
+  }
+  .mod_navigation {
+    width: 100%;
+  }
+
+  .mobile_menu_active {
+    .inner {
+      overflow-y: scroll;
+      position: absolute;
+    }
+  }
+}

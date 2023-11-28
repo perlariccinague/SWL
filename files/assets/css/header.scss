@@ -94,7 +94,12 @@
     .header-top {
       justify-content: center;
       .header-left {
-        display: none;
+        width: 90%;
+      /*  background: #07112B;*/
+        padding: 9px 16px;
+        ul {
+          font-size: 11px;
+        }
       }
     }
     .header-bottom {
@@ -103,5 +108,6 @@
   }
   .bg-header {
     height: 25vh;
+    display: none;
   }
 }
