@@ -13,20 +13,21 @@
 .mod_newslist, .mod_newsreader {
   padding-bottom: 65px;
   .layout_short, .layout_full {
-    background: #707777d9;
+    background: $darkblue;
     margin-bottom: 20px;
     padding: 20px;
     color: white;
+    clip-path: polygon(100% 0, 100% 90%, 96% 100%, 0 100%, 0 0);
     h2 {
-      border: 0;
-      padding-bottom: 0;
+      display: inline-block;
       margin: 0;
+      font: normal normal 300 30px/40px Inter;
       a {
-        color: $green;
-        transition: color 250ms;
+        color: white;
+       /* transition: color 250ms;
         &:hover {
           color: $türkis;
-        }
+        }*/
       }
     }
     p {
@@ -58,14 +59,29 @@
 
     }
     p {
-      font: normal normal 300 22px/28px Inter;
+      font: normal normal 400 22px/28px Inter;
       a {
-        color: black;
+        color: $green;
+      }
+    }
+    ul {
+      font: normal normal 400 22px/28px Inter;
+      li {
+        padding-left: 20px;
+        &:before {
+          font-weight: 600;
+          content: "»";
+          position: absolute;
+          margin-left: -20px;
+          font-size: 22px;
+          margin-top: -1px;
+          color: $green;
+        }
       }
     }
   }
   .back {
-    font: normal normal 300 22px/28px Inter;
+    font: normal normal 400 22px/28px Inter;
     a {
       color: $green;
       transition: color 250ms;

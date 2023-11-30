@@ -6,6 +6,7 @@
 }
 body {
   font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
 }
 ul {
   margin: 0;
@@ -22,6 +23,10 @@ h2 {
   padding-bottom: 15px;
   border-bottom: 1px solid;
   text-transform: uppercase;
+}
+
+p {
+  font: normal normal 400 22px/28px Inter;
 }
 
 .ce_headline {
@@ -110,5 +115,9 @@ h2 {
     p a {
       font: normal normal 400 13px/20px Inter;
     }
+  }
+
+  p {
+    font: normal normal 400 18px/28px Inter;
   }
 }

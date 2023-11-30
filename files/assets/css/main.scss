@@ -123,7 +123,7 @@
       margin: 0;
     }
     p {
-      font: normal normal 300 20px/28px Inter;
+      font: normal normal 400 20px/28px Inter;
       a {
         font: normal normal 500 20px/35px Inter;
         color: white;
@@ -173,11 +173,11 @@
     h2 {
       border-color: $green;
       max-width: 500px;
-      margin: 0 auto 30px;
+      margin: 5px auto 30px;
       color: #00664f;
     }
     p {
-      font: normal normal 300 22px/30px Inter;
+      font: normal normal 400 22px/30px Inter;
       a {
         color: $darkblue;
         transition: color 250ms;
@@ -193,7 +193,7 @@
 }
 
 .teaser .headline {
-  margin: 0 auto;
+  margin: 30px auto 0;
 }
 
 .teaser.headline-image {
@@ -302,8 +302,8 @@
 }
 
 .teaser-contain {
-  background: #00644e;
-  transform: translateY(-23%);
+  background: rgba(0, 100, 78, 0.8);;
+  transform: translateY(-30%);
   z-index: 3;
   position: relative;
   clip-path: polygon(100% 0, 100% 92%, 97% 100%, 0 100%, 0 0);
@@ -322,8 +322,8 @@
 
 .tabs-block {
   position: relative;
-  height: 400px;
-  margin: 0 auto;
+  height: 530px;
+  margin: 53px auto;
   display: flex;
   justify-content: space-between;
 }
@@ -353,7 +353,7 @@
     display: block;
     width: 100%;
     font: normal normal 300 30px/28px Inter;
-    border-top: 3px solid;
+    border-top: 4px solid;
     padding-top: 20px;
     margin-top: 15px;
     margin-bottom: 25px;
@@ -386,13 +386,18 @@
   opacity: 0;
   transition: opacity 500ms ease-out;
   box-sizing: border-box;
+  height: 300px;
 }
 .tab input[type="radio"] {
   display: none;
 }
 
 .tab input[type="radio"]:checked + label{
-  color: black;
+  color: $green;
+  & > img {
+    filter: brightness(0) saturate(100%) invert(30%) sepia(11%) saturate(4421%) hue-rotate(123deg)
+  }
+
 }
 .tab input[type="radio"]:checked + label ~ .tab-content   {
   opacity: 1;
@@ -484,11 +489,11 @@
     h2 {
       max-width: 500px;
       color: $green;
-      margin: 0 auto;
+      margin: 5px auto;
       text-align: center;
     }
     p {
-      font: normal normal 300 22px/28px Inter;
+      font: normal normal 400 22px/28px Inter;
       a {
         color: $darkblue;
         transition: color 250ms;
@@ -561,7 +566,7 @@ iframe {
       font: normal normal 300 25px/30px Inter;
     }
     p {
-      font: normal normal 300 18px/28px Inter;
+      font: normal normal 400 18px/28px Inter;
       a {
         font: normal normal 500 17px/33px Inter;
       }
@@ -594,7 +599,7 @@ iframe {
   }
 
   .teaser .ce_text p {
-    font: normal normal 300 18px/28px Inter;
+    font: normal normal 400 18px/28px Inter;
   }
 
   .teaser-right .ce_text p {
@@ -620,6 +625,16 @@ iframe {
   }
   .teaser-image.spacing {
     padding-bottom: 0;
+  }
+  .image-left .image_container img {
+    height: 90vh;
+  }
+  .teaser-right {
+    margin-top: -5px;
+  }
+  .teaser-contain {
+    clip-path: polygon(100% 0, 100% 93%, 90% 100%, 0 100%, 0 0);
+    transform: translateY(-19.5%);
   }
 }
 

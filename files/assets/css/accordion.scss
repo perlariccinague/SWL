@@ -38,6 +38,10 @@
   display: none;
 }
 
+.teaser.requirements .ce_accordionStart.ce_accordion {
+  display: block;
+}
+
 @media screen and (max-width: 1100px) {
   .teaser.requirements {
     .ce_accordionStart.ce_accordion {
@@ -69,7 +73,7 @@
         cursor: pointer;
         text-align: center;
         border-top: 4px solid;
-        font: normal normal 300 24px/28px Inter;
+        font: normal normal 400 24px/28px Inter;
         text-transform: uppercase;
         &:before {
           content: "";

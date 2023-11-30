@@ -33,17 +33,23 @@
   flex-wrap: wrap;
 }
 
-.mod_navigation {
+.menu-list-desktop > div {
   width: 24%;
-  h2 {
-    font: normal normal 300 20px/24px Inter;
+  a {
+    transition: color 250ms;
     color: white;
-    text-transform: uppercase;
-    border-bottom: 2px solid white;
-    padding-top: 30px;
-    padding-bottom: 10px;
-    display: inline-block;
-    margin: 0;
+    h2 {
+      font: normal normal 300 20px/24px Inter;
+      text-transform: uppercase;
+      border-bottom: 2px solid white;
+      padding-top: 30px;
+      padding-bottom: 10px;
+      display: inline-block;
+      margin: 0;
+    }
+    &:hover {
+      color: $türkis;
+    }
   }
   ul {
     font: normal normal 400 18px/30px Inter;
@@ -86,7 +92,7 @@
   .mobile_menu_active {
     overflow-x: hidden;
   }
-  .mod_navigation {
+  .menu-list-desktop > div {
     width: 100%;
   }
 

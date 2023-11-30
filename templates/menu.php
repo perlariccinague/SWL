@@ -17,12 +17,30 @@
 </div>
 
 <div class="menu-list-desktop">
-    {{insert_module::13}}
-    {{insert_module::14}}
-    {{insert_module::15}}
-    {{insert_module::16}}
-    {{insert_module::17}}
-    {{insert_module::18}}
+    <div>
+        <a href="{{link_url::15}}"><h2>Bekanntmachung</h2></a>
+        {{insert_module::13}}
+    </div>
+    <div>
+        <a href="{{link_url::16}}"><h2>Unternehmen</h2></a>
+        {{insert_module::14}}
+    </div>
+    <div>
+        <a href="{{link_url::13}}"><h2>Produkte und Preise</h2></a>
+        {{insert_module::15}}
+    </div>
+    <div>
+        <a href="{{link_url::17}}"><h2>Service</h2></a>
+        {{insert_module::16}}
+    </div>
+    <div>
+        <a href="{{link_url::18}}"><h2>Netzbetrieb</h2></a>
+        {{insert_module::17}}
+    </div>
+    <div>
+        <a href="{{link_url::19}}"><h2>Rückrufservice</h2></a>
+        {{insert_module::18}}
+    </div>
 </div>
 
 
