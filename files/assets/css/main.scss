@@ -111,11 +111,14 @@
     &:nth-child(2) {
       background: $green;
     }
+    &:nth-child(3) {
+      background: linear-gradient(129deg, #00664F 0%, #07112B 100%) no-repeat;
+    }
     &:last-child {
       background: $darkblue;
     }
     h3 {
-      font: normal normal 300 30px/36px Inter;
+      font: normal normal 300 28px/36px Inter;
       text-transform: uppercase;
       border-bottom: 1px solid white;
       padding: 20px 0 15px;
@@ -143,13 +146,20 @@
         &:hover {
           color: $türkis;
           &:before {
-            background: url("/files/assets/layout/arrow-right_türkis.svg") no-repeat 0/contain;
+            background: url("/files/assets/layout/arrow-right-türkis.svg") no-repeat 0/contain;
           }
         }
       }
     }
   }
  }
+
+.box-block.natur {
+  max-width: 600px;
+  .box {
+    width: 49%;
+  }
+}
 
 .press {
   padding-bottom: 60px;
@@ -207,13 +217,14 @@
       }
     }
   }
+  .ce_headline {
+    margin: 50px auto 0;
+  }
 }
 
-#nature.teaser .ce_text h2 {
-  max-width: 650px;
-
+#electromobility.teaser .ce_text:first-child {
+  margin: 0 auto;
 }
-
 
 .teaser .headline {
   margin: 30px auto 0;
@@ -326,7 +337,7 @@
 
 .teaser-contain {
   background: rgba(0, 100, 78, 0.8);;
-  transform: translateY(-28%);
+  transform: translateY(-70px);
   z-index: 3;
   position: relative;
   clip-path: polygon(100% 0, 100% 92%, 97% 100%, 0 100%, 0 0);
@@ -334,13 +345,19 @@
   .ce_text {
     color: white;
     text-align: center;
-    padding: 15px 15px;
     h2 {
       display: inline-block;
       margin: 0;
     }
     p {
       font: normal normal 400 22px/28px Inter;
+      a {
+        color: #ffffffcf;
+        transition: color 250ms;
+        &:hover {
+          color: $green ;
+        }
+      }
     }
 
   }
@@ -603,7 +620,7 @@
           content: "";
           position: absolute;
           top: 11px;
-          left: 0;
+          left: 25px                 ;
           height: 22px;
           width: 24px;
           background: url("/files/assets/layout/arrow-right-green.svg") no-repeat;
@@ -633,6 +650,36 @@ iframe {
   width: 100%;
   height: 60vh;
 }
+
+table {
+  width: 100%;
+  border-bottom: 1px solid $green;
+  border-right: 0;
+  border-left: 0;
+  border-top: 0;
+  font: normal normal 400 22px/30px Inter;
+}
+
+th,td {
+  padding: 5px 10px;
+  border: 0;
+}
+
+td {
+  padding: 20px 10px;
+}
+
+.th {
+  background: $green;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+  td {
+    padding: 5px 10px;
+  }
+
+}
+
 
 @media screen and (max-width: 1100px) {
   .call-button {
@@ -722,28 +769,17 @@ iframe {
   }
   .teaser-contain {
     clip-path: polygon(100% 0, 100% 93%, 90% 100%, 0 100%, 0 0);
-    transform: translateY(-26%);
+    transform: translateY(-60px);
+  }
+
+  table {
+    font-size: 9px;
+  }
+  .th td , td{
+    padding: 5px 0;
   }
 }
 
-@media screen and (max-width: 750px) {
-  .teaser-contain {
-
-    transform: translateY(-24%);
-  }
-}
-
-@media screen and (max-width: 595px) {
-  .teaser-contain {
-    transform: translateY(-20%);
-  }
-}
-
-@media screen and (max-width: 390px) {
-  .teaser-contain {
-    transform: translateY(-18%);
-  }
-}
 
 
 
