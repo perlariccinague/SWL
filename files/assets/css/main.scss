@@ -66,6 +66,7 @@
       vertical-align: middle;
       color: white;
       text-transform: uppercase;
+      padding: 0;
       a {
         font: normal normal 400 20px/50px Inter;
         text-decoration: none;
@@ -161,6 +162,10 @@
   }
 }
 
+#category .box-block .box h3 {
+  height: 65px;
+}
+
 .press {
   padding-bottom: 60px;
 }
@@ -201,7 +206,6 @@
     }
     ul {
       text-align: left;
-      font: normal normal 400 22px/28px Inter;
       li {
         padding-left: 20px;
 
@@ -224,10 +228,6 @@
 
 #electromobility.teaser .ce_text:first-child {
   margin: 0 auto;
-}
-
-.teaser .headline {
-  margin: 30px auto 0;
 }
 
 .teaser.headline-image {
@@ -309,7 +309,6 @@
       }
     }
     ul {
-      font: normal normal 400 22px/28px Inter;
       li {
         padding-left: 20px;
         &:before {
@@ -345,6 +344,7 @@
   .ce_text {
     color: white;
     text-align: center;
+    padding: 0 12px;
     h2 {
       display: inline-block;
       margin: 0;
@@ -466,6 +466,10 @@
   }
 }
 
+.download {
+  margin-bottom: 60px;
+}
+
 .ce_download {
   box-sizing: border-box;
   clip-path: polygon(100% 0, 100% 85%, 94% 100%, 0 100%, 0 0);
@@ -530,9 +534,9 @@
   margin: 60px auto;
   .ce_text {
     h2 {
-      max-width: 500px;
+      max-width: 675px;
       color: $green;
-      margin: 5px auto;
+      margin: 0 auto 50px;
       text-align: center;
     }
     p {
@@ -550,7 +554,6 @@
       }
     }
     ul {
-      font: normal normal 400 22px/28px Inter;
       li {
         padding-left: 20px;
         &:before {
@@ -607,7 +610,7 @@
       }
     }
     ul {
-      font: normal normal 400 22px/45px Inter;
+      line-height: 45px;
       li {
         padding-left: 35px;
         position: relative;
@@ -694,7 +697,8 @@ td {
       height: 100vh;
     }
   }
-  .box-block .box, .box-block.press .box {
+  .box-block .box, .box-block.press .box,
+  .box-block.natur .box {
     width: 100%;
     padding: 15px 13px;
     h3 {
@@ -707,10 +711,13 @@ td {
       }
     }
   }
+  .box-block {
+    padding-top: 25px;
+  }
   .teaser {
     .ce_text {
       padding-bottom: 0;
-      margin: 40px auto;
+      margin: 20px auto;
     }
   }
   .image-left, .teaser-right {
@@ -737,13 +744,26 @@ td {
     font: normal normal 400 18px/28px Inter;
   }
 
-  .teaser-right .ce_text p {
-    font: normal normal 400 18px/28px Inter;
+  .teaser-right {
+    clip-path: polygon(100% 0, 100% 95%, 92% 100%, 0 100%, 0 0);
+    margin-top: -5px;
+    .ce_text {
+      h2 {
+        font: normal normal 300 25px/36px Inter;
+      }
+      p, p a{
+       font-size: 18px;
+      }
+      p a {
+        font-size: 18px;
+        padding: 10px 30px 10px 55px;
+        &:before {
+          left: 20px;
+        }
+      }
+    }
   }
 
-  .teaser-right .ce_text h2 {
-    font: normal normal 300 25px/36px Inter;
-  }
 
   .sticky-box .ce_text {
     right: -360px;
@@ -764,12 +784,13 @@ td {
   .image-left .image_container img {
     height: 90vh;
   }
-  .teaser-right {
-    margin-top: -5px;
-  }
+
   .teaser-contain {
     clip-path: polygon(100% 0, 100% 93%, 90% 100%, 0 100%, 0 0);
     transform: translateY(-60px);
+    .ce_text p {
+      font-size: 18px;
+    }
   }
 
   table {
@@ -777,6 +798,61 @@ td {
   }
   .th td , td{
     padding: 5px 0;
+  }
+
+  .privacy {
+    margin: 30px auto 0;
+    .ce_text p {
+      font-size: 18px;
+    }
+  }
+
+  .teaser.requirements .ce_text {
+    h2 {
+      font-size: 19px;
+    }
+    ul {
+      line-height: 35px;
+    }
+  }
+  .teaser.headline-image {
+    .image_container {
+      margin: 30px auto;
+    }
+    h2 {
+      font-size: 22px;
+    }
+  }
+  .bg-green {
+    clip-path: polygon(100% 0, 100% 95%, 92% 100%, 0 100%, 0 0);
+    .ce_text {
+      width: 90%;
+      margin: 0 auto;
+      padding: 40px 0 0;
+      &:nth-child(2) {
+        padding-bottom: 50px;
+      }
+      p {
+        font-size: 17px;
+      }
+    }
+  }
+  .ce_download  {
+    h3 {
+      font-size: 24px;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+  .download {
+    margin-bottom: 0;
+  }
+  .press {
+    padding-bottom: 0;
+  }
+  .teaser .ce_headline {
+    margin: 0 auto;
   }
 }
 

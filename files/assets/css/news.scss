@@ -91,3 +91,23 @@
     }
   }
 }
+
+@media screen and (max-width: 1100px) {
+  .mod_newslist .layout_short, .mod_newslist .layout_full,
+  .mod_newsreader .layout_short, .mod_newsreader .layout_full {
+    clip-path: polygon(100% 0, 100% 93%, 90% 100%, 0 100%, 0 0);
+    h2 {
+      font: normal normal 300 19px/35px Inter;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+  .mod_newslist, .mod_newsreader {
+    padding-bottom: 0;
+  }
+
+  .news .ce_headline {
+    margin: 30px auto;
+  }
+}

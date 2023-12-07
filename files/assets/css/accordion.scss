@@ -130,6 +130,29 @@
     &:before, &:after {
       display: none;
     }
+    &.active {
+      color: white;
+    }
+  }
+  .teaser #last {
+    margin-bottom: 20px;
+  }
+  #category .box-block .box h3 {
+    height: auto;
+  }
+
+  .privacy .ce_accordionStart.ce_accordion {
+    .toggler {
+      font-size: 20px;
+      padding: 10px 50px;
+      background-size: auto 14px;
+      .ce_text {
+        padding: 0;
+      }
+    }
+    &:last-child {
+      padding-bottom: 0;
+    }
   }
 }
 
