@@ -2,11 +2,11 @@
 
 
 #wrapper {
-  overflow-x: hidden;
+  overflow-x: hidden !important;;
 }
 body {
   font-family: 'Inter', sans-serif;
-  overflow-x: hidden;
+  overflow-x: hidden
 }
 ul {
   margin: 0;
@@ -121,7 +121,10 @@ p {
     }
   }
   .back-to-top {
-    right: 0;
-    bottom: 0;
+    right: 20px;
+    bottom: 20px;
+    img {
+      width: 50px;
+    }
   }
 }

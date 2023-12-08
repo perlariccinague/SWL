@@ -31,7 +31,7 @@
       border: none;
     }
     p {
-      font: normal normal 400 17px/20px Inter;
+      font: normal normal 400 17px/28px Inter;
       a {
         color: white;
         transition: color 250ms;
@@ -43,15 +43,16 @@
   }
   .footer-middle {
     .mod_customnav {
+      width: 300px;
       ul {
         display: flex;
         justify-content: space-between;
         font: normal normal 600 14px/16px Inter;
         margin: 10px auto;
         li {
-          padding-right: 16px;
           &:not(:last-child) {
             border-right: 2px solid white;
+            padding-right: 10px;
           }
           a {
             color: white;
@@ -103,13 +104,13 @@
 
 .burg {
   position: relative;
-  top: 0;
+  top: 70px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   justify-content: end;
   img {
-    width: 1150px;
+    width: 1400px;
   }
 }
 

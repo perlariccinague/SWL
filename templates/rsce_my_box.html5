@@ -1,4 +1,18 @@
+<!--<div class="box">
+    <h3><?/*= $this->titel */?></h3>
+    <p><?/*= $this->description */?></p>
+</div>-->
+
+
 <div class="box">
-    <h3><?= $this->titel ?></h3>
-    <p><?= $this->description ?></p>
+    <a href="<?= $this->link ?>">
+        <div class="box-inside">
+            <h3><?= $this->titel ?></h3>
+            <p><?= $this->description ?></p>
+            <div class="more-button"><?= $this->anchor ?></div>
+        </div>
+    </a>
 </div>
+
+
+

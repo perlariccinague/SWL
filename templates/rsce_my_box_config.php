@@ -20,19 +20,14 @@ return array(
             'eval' => array('rte' => 'tinyMCE'),
             'inputType' => 'textarea',
         ),
-       /* 'link' => array(
+        'link' => array(
             'label' => array('Link', 'Auf welche Seite soll diese Box verlinken?'),
             'inputType' => 'pageTree'
-        ),*/
-       /* 'anchor' => array(
-            'label' => array('Link1', 'Beschreibung...'),
-            'eval' => array('rte' => 'tinyMCE'),
-            'inputType' => 'textarea'
         ),
-        'anchor1' => array(
-            'label' => array('Link2', 'Beschreibung...'),
-            'eval' => array('rte' => 'tinyMCE'),
-            'inputType' => 'textarea'
-        ),*/
+       'anchor' => array(
+            'label' => array('Anchor', 'Beschreibung...'),
+          /*  'eval' => array('rte' => 'tinyMCE'),*/
+            'inputType' => 'text'
+        ),
     )
 );
