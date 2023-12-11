@@ -110,14 +110,14 @@
     box-sizing: border-box;
     clip-path: polygon(100% 0, 100% 93%, 94% 100%, 0 100%, 0 0);
     color: white;
-    padding: 15px 20px;
+    padding: 35px 20px;
     &:first-child {
       background: $gray;
     }
     &:nth-child(2) {
       background: $green;
     }
-    /*&:nth-child(3) {
+   /* &:nth-child(3) {
       background: linear-gradient(129deg, #00664F 0%, #07112B 100%) no-repeat;
     }*/
     &:last-child {
@@ -133,31 +133,44 @@
     }
     p {
       font: normal normal 400 20px/28px Inter;
-      a {
-        font: normal normal 500 20px/35px Inter;
-        color: white;
-        position: relative;
-        text-transform: uppercase;
-        padding: 0 35px;
-        transition: color 250ms;
+      height: 60px;
+    }
+    a {
+      color: white;
+    }
+    .more-button {
+      font: normal normal 500 20px/35px Inter;
+      color: white;
+      position: relative;
+      text-transform: uppercase;
+      padding: 0 35px;
+      transition: color 250ms;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: 0;
+        height: 27px;
+        width: 27px;
+        background: url("/files/assets/layout/arrow-right.svg") no-repeat 0/contain;
+      }
+      &:hover {
+        color: $türkis;
         &:before {
-          content: "";
-          position: absolute;
-          top: -2px;
-          left: 0;
-          height: 27px;
-          width: 27px;
-          background: url("/files/assets/layout/arrow-right.svg") no-repeat 0/contain;
-        }
-        &:hover {
-          color: $türkis;
-          &:before {
-            background: url("/files/assets/layout/arrow-right-türkis.svg") no-repeat 0/contain;
-          }
+          background: url("/files/assets/layout/arrow-right-türkis.svg") no-repeat 0/contain;
         }
       }
     }
+    & .leer {
+      padding: 15px 0;
+    }
   }
+  &.home .box p {
+    height: 105px;
+  }
+  &.preis .box:nth-child(3) {
+      background: linear-gradient(129deg, #00664F 0%, #07112B 100%) no-repeat;
+    }
  }
 
 .box-block.natur {

@@ -8,11 +8,16 @@
     <a href="<?= $this->link ?>">
         <div class="box-inside">
             <h3><?= $this->titel ?></h3>
-            <p><?= $this->description ?></p>
+            <?php if($this->description !== ""): ?>
+              <p><?= $this->description ?></p>
+            <?php else: ?>
+            <div class="leer"></div>
+            <?php endif; ?>
             <div class="more-button"><?= $this->anchor ?></div>
         </div>
     </a>
 </div>
+
 
 
 

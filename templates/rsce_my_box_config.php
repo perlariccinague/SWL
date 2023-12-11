@@ -17,12 +17,14 @@ return array(
 
         'description' => array(
             'label' => array('Text', 'Beschreibung...'),
-            'eval' => array('rte' => 'tinyMCE'),
-            'inputType' => 'textarea',
+           /* 'eval' => array('rte' => 'tinyMCE'),
+            'inputType' => 'textarea',*/
+            'inputType' => 'text',
         ),
         'link' => array(
             'label' => array('Link', 'Auf welche Seite soll diese Box verlinken?'),
-            'inputType' => 'pageTree'
+            'eval' => array('pageTree' => true),
+            'inputType' => 'url',
         ),
        'anchor' => array(
             'label' => array('Anchor', 'Beschreibung...'),
