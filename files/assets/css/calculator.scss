@@ -1,0 +1,163 @@
+@import 'variables';
+
+#calculator {
+  margin-top: -64px;
+  position: relative;
+  > .ce_text:first-child {
+    width: 90%;
+    max-width: 650px;
+    margin: 0 auto;
+    background: #00664fdd;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    h2 {
+      margin: 0;
+      color: white;
+      text-transform: uppercase;
+      font-weight: 300;
+      padding-bottom: 16px;
+      border-bottom: 2px solid white;
+      display: inline;
+      font-size: 22px;
+    }
+  }
+  .ce_tabcontrol {
+    display: flex;
+    width: 90%;
+    max-width: 650px;
+    margin: 0 auto;
+    background: $green;
+    .tabcontrol_tabs {
+      width: 20%;
+      ul {
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        li {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: white;
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 16px;
+          cursor: pointer;
+          background-color: rgba(255,255,255,.8);
+          color: $green;
+          transition: background-color 250ms;
+          &.selected {
+            background-color: transparent;
+            color: white;
+            cursor: initial;
+            &:hover {
+              background-color: transparent;
+            }
+          }
+          &:hover {
+            background-color: rgba(255,255,255,.6);
+          }
+        }
+      }
+    }
+    .tabcontrol_panes {
+      width: 80%;
+      .ce_form {
+        padding: 30px;
+        .widget {
+          label {
+            color: white;
+          }
+        }
+        .widget-select {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          padding: 20px;
+        }
+        .calculator-select-wrapper {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          width: 100%;
+          max-width: 360px;
+        }
+        .widget-submit {
+          padding: 20px 40px;
+          clip-path: polygon(100% 0px, 99.69% 70.27%, 97.07% 98.49%, 0px 100%, 0px 0px);
+          button {
+            display: block;
+            width: 185px;
+            margin-left: auto;
+            padding: 5px;
+            border: none;
+            background: white;
+            color: $green;
+            text-transform: uppercase;
+            clip-path: polygon(100% 0px, 99.69% 70.27%, 95.99% 98.49%, 0px 100%, 0px 0px);
+            cursor: pointer;
+          }
+        }
+        fieldset {
+          border: none;
+          padding: 0;
+          width: 100%;
+          margin: 0;
+        }
+        .widget-radio {
+          fieldset {
+            padding: 15px;
+            legend {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+  .select-wrapper {
+    position: relative;
+    width: 220px;
+    select {
+      // display: none;
+    }
+    .select-selected {
+       background-color: #529989;
+    }
+    .select-selected:after {
+      position: absolute;
+      content: "";
+      top: 14px;
+      right: 10px;
+      width: 0;
+      height: 0;
+      border: 6px solid transparent;
+      border-color: #fff transparent transparent transparent;
+    }
+    .select-selected.select-arrow-active:after {
+      border-color: transparent transparent #fff transparent;
+      top: 7px;
+    }
+    .select-items div,.select-selected {
+      color: #ffffff;
+      padding: 8px 16px;
+      border: 1px solid transparent;
+      border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+      cursor: pointer;
+    }
+    .select-items {
+      position: absolute;
+      background-color: #529989;
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: 99;
+    }
+    .select-hide {
+      display: none;
+    }
+    .select-items div:hover, .same-as-selected {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+}

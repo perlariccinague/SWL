@@ -1,0 +1,46 @@
+<?php
+    header("Access-Control-Allow-Origin: *");
+    SESSION_START();
+    $netzgebiet = $this->replaceInsertTags('{{post::netzgebiet}}', false);
+    $energieart = $this->replaceInsertTags('{{post::energieart}}', false);
+    $verbrauch = $this->replaceInsertTags('{{post::verbrauch}}', false);
+    $zielgruppe = $this->replaceInsertTags('{{post::zielgruppe}}', false);
+    $_SESSION["netz"] = $netzgebiet;
+
+    $name = null;
+    $grundpreis = null;
+    $arbeitspreis = null;
+?>
+<div class="calculator-results">
+<?php foreach($this->tarife as $tarif): ?>
+<?php
+  if ($tarif->aktiv
+    && $tarif->region === $netzgebiet
+    && $tarif->energieart === $energieart
+    && $tarif->zielgruppe === $zielgruppe): ?>
+
+  <?php
+    $name = $tarif->name;
+  ?>
+    <?php foreach($tarif->preisstufen as $stufe): ?>
+      <?php
+          if(intval($verbrauch) >= intval($stufe->stufeVon) && intval($verbrauch) < intval($stufe->stufeBis)) {
+            $grundpreis = $stufe->grundpreis;
+            $arbeitspreis = $stufe->arbeitspreis;
+          }
+      ?>
+    <?php endforeach; ?>
+    <div class="calculator-result-card">
+        <p><?= $zielgruppe ?></p>
+        <p><?= $name ?></p>
+        <p><?= $energieart ?></p>
+        <p><?= $netzgebiet ?></p>
+        <p><?= $grundpreis ?></p>
+        <p><?= $arbeitspreis ?></p>
+        <div class="tarif-button">
+            <a href="{{link_url::44}}?tarif=<?= $name ?>">Tarif auswählen</a>
+        </div>
+    </div>
+<?php endif; ?>
+<?php endforeach; ?>
+</div>
