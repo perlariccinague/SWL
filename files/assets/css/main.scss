@@ -17,7 +17,7 @@
 }
 
 .sticky-box .ce_text {
-  z-index: 5;
+  z-index: 50;
   position: absolute;
   right: -450px;
   top: 45vh;
@@ -298,6 +298,9 @@
     max-width: 500px;
     h2 {
       font: normal normal 300 30px/36px Inter;
+      span {
+        text-transform: initial;
+      }
     }
     p {
       font: normal normal 400 22px/30px Inter;
