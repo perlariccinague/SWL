@@ -1,0 +1,12 @@
+<div id="zip-codes">
+  <?php foreach($this->zones as $zone): ?>
+      <div class="zone">
+          <span><?= $zone->name ?></span>
+          <ul>
+            <?php foreach($zone->zipcodes as $zipcode): ?>
+                <li><?= $zipcode->zip ?></li>
+            <?php endforeach; ?>
+          </ul>
+      </div>
+  <?php endforeach; ?>
+</div>

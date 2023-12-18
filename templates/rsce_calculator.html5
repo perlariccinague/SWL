@@ -31,12 +31,26 @@
       ?>
     <?php endforeach; ?>
     <div class="calculator-result-card">
+        <h3><?= $name ?></h3>
+        <h4><?= $tarif->tagline ?></h4>
+        <ul>
+            <?php if($tarif->bio === 'Ja'): ?><li>100% Ökostrom aus Europa</li><?php endif; ?>
+            <li>unbefristet laufender Vertrag</li>
+            <li>Erstlaufzeit 3 Monate, danach jederzeit mit einer Frist von 1 Monat zum Ende eines Kalendermonats kündbar</li>
+        </ul>
         <p><?= $zielgruppe ?></p>
-        <p><?= $name ?></p>
         <p><?= $energieart ?></p>
         <p><?= $netzgebiet ?></p>
-        <p><?= $grundpreis ?></p>
-        <p><?= $arbeitspreis ?></p>
+        <div class="result-card-footer">
+            <div class="result-card-amount">
+                <p>Ihr Jahrespreis brutto:</p>
+            </div>
+            <div class="result-card-layover">
+                <p>Grundpreis:<?= $grundpreis ?></p>
+                <p><?= $arbeitspreis ?></p>
+            </div>
+        </div>
+
         <div class="tarif-button">
             <a href="{{link_url::44}}?tarif=<?= $name ?>">Tarif auswählen</a>
         </div>
