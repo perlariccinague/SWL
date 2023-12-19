@@ -1,9 +1,7 @@
 if(document.querySelector('#calculator')) {
   const calculator = document.querySelector('#calculator');
-  const zipInput = calculator.querySelector('input[name=plz]');
+  const allForms = calculator.querySelectorAll('.ce_form');
   const allZoneElements = document.querySelectorAll('.zone');
-  const cityInput = document.querySelector('input[name=netzgebiet]');
-  const submitButton = document.querySelector('.widget-submit button')
   const allZones = [];
   allZoneElements.forEach(element => {
     const newZone = {};
@@ -15,17 +13,22 @@ if(document.querySelector('#calculator')) {
     newZone.zips = zipArray;
     allZones.push(newZone);
   })
-  zipInput.addEventListener('input', function() {
-    submitButton.classList.remove('active');
-    cityInput.value = '';
-    allZones.forEach(zone => {
-      zone.zips.forEach(zip => {
-        if(zipInput.value !== '' && zip.startsWith(zipInput.value)) {
-          cityInput.value = zone.name;
-          if(zipInput.value.length === 5) {
-            submitButton.classList.add('active');
+  allForms.forEach(form => {
+    const zipInput = form.querySelector('input[name=plz]');
+    const cityInput = form.querySelector('input[name=netzgebiet]');
+    const submitButton = form.querySelector('.widget-submit button')
+    zipInput.addEventListener('input', function() {
+      submitButton.classList.remove('active');
+      cityInput.value = '';
+      allZones.forEach(zone => {
+        zone.zips.forEach(zip => {
+          if(zipInput.value !== '' && zip.startsWith(zipInput.value)) {
+            cityInput.value = zone.name;
+            if(zipInput.value.length === 5) {
+              submitButton.classList.add('active');
+            }
           }
-        }
+        })
       })
     })
   })

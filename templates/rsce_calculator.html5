@@ -10,6 +10,7 @@
     $name = null;
     $grundpreis = null;
     $arbeitspreis = null;
+    $result = null;
 ?>
 <div class="calculator-results">
 <?php foreach($this->tarife as $tarif): ?>
@@ -27,6 +28,7 @@
           if(intval($verbrauch) >= intval($stufe->stufeVon) && intval($verbrauch) < intval($stufe->stufeBis)) {
             $grundpreis = $stufe->grundpreis;
             $arbeitspreis = $stufe->arbeitspreis;
+            $result = floatval($grundpreis) + (floatval($arbeitspreis) * floatval($verbrauch) / 100);
           }
       ?>
     <?php endforeach; ?>
@@ -38,16 +40,17 @@
             <li>unbefristet laufender Vertrag</li>
             <li>Erstlaufzeit 3 Monate, danach jederzeit mit einer Frist von 1 Monat zum Ende eines Kalendermonats kündbar</li>
         </ul>
-        <p><?= $zielgruppe ?></p>
+        <!--<p><?= $zielgruppe ?></p>
         <p><?= $energieart ?></p>
-        <p><?= $netzgebiet ?></p>
+        <p><?= $netzgebiet ?></p> -->
         <div class="result-card-footer">
             <div class="result-card-amount">
-                <p>Ihr Jahrespreis brutto:</p>
+                <p>Ihr Jahrespreis inkl. MwSt:</p>
+                <span><?= number_format($result, 2) ?> €</span>
             </div>
             <div class="result-card-layover">
-                <p>Grundpreis:<?= $grundpreis ?></p>
-                <p><?= $arbeitspreis ?></p>
+                <p>Grundpreis inkl. MwSt: <strong><?= number_format($grundpreis, 2) ?> €/Jahr</strong></p>
+                <p>Arbeitspreis inkl. MwSt: <strong><?= number_format($arbeitspreis, 2) ?> ct/kWh</strong></p>
             </div>
         </div>
 

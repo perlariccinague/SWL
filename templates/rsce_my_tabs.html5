@@ -4,7 +4,7 @@
             <input type="radio" name="tabs" id="tab<?= $key ?>">
             <label for="tab<?= $key ?>" id="tab<?= $key ?>"> <img src="{{file::<?= $tab->image ?>}}"><span><?= $tab->titel ?></span></label>
             <div class="tab-content">
-                <p><?= $tab->description ?></p>
+                <?= $tab->description ?>
             </div>
         </div>
     <?php endforeach; ?>

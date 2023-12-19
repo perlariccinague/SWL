@@ -38,6 +38,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
+          text-align: center;
           text-transform: uppercase;
           font-weight: bold;
           font-size: 16px;
@@ -117,9 +118,16 @@
 
 #calculator .ce_form {
   padding: 30px;
+  height: 330px;
+  display: flex;
+  align-items: center;
   .widget {
     label {
       color: white;
+      &.flex {
+        display: flex;
+        align-items: center;
+      }
     }
   }
   .widget-select {
@@ -131,14 +139,17 @@
   .widget-text {
     padding: 20px;
     label {
+      display: flex;
+      align-items: center;
       text-transform: uppercase;
       opacity: .7;
-      display: inline-block;
       width: 110px;
     }
     input {
       width: 65px;
       outline: none;
+      padding: 5px;
+      color: $green;
       &[type=number] {
         -moz-appearance: textfield;
         &::-webkit-outer-spin-button,&::-webkit-inner-spin-button {
@@ -180,6 +191,11 @@
       cursor: pointer;
       pointer-events: none;
       opacity: .5;
+      transition: color 250ms, background-color 250ms;
+      &:hover {
+        background-color: rgba(255,255,255,.4);
+        color: white;
+      }
       &.active {
         pointer-events: initial;
         opacity: 1;
@@ -191,12 +207,35 @@
     padding: 0;
     width: 100%;
     margin: 0;
+    &.zweitarif {
+      display: flex;
+      legend {
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 10px 0 0 20px;
+      }
+    }
     &.flex {
       display: flex;
-      .widget-text:last-child {
-        padding: 0;
-        input {
-          width: 180px;
+      .widget-text {
+        display: flex;
+        width: 189px;
+        &:last-child {
+          display: flex;
+          padding: 0;
+          input {
+            width: 180px;
+          }
+        }
+      }
+      .widget-radio {
+        width: 200px;
+        legend {
+          text-transform: uppercase;
+          opacity: .8;
+          display: block;
+          height: 30px;
         }
       }
     }
@@ -204,6 +243,7 @@
   .widget-radio {
     fieldset {
       padding: 15px;
+      box-sizing: border-box;
       span:not(:last-child) {
         margin-right: 10px;
       }
@@ -236,6 +276,134 @@
   }
 }
 
+.vertrag-form-article {
+  .ce_form {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    .formbody {
+      fieldset {
+        padding: 0;
+        border: none;
+        fieldset {
+          .widget-text {
+            &:first-child {
+              margin: 0;
+            }
+            label {
+              width: 100%;
+              text-align: left;
+              max-width: initial;
+            }
+          }
+        }
+      }
+      .widget-text,.widget-select {
+        margin: 20px 0;
+        label {
+          display: inline-block;
+          width: 90%;
+          max-width: 200px;
+          box-sizing: border-box;
+          text-transform: uppercase;
+          color: $green;
+          text-align: right;
+          margin-right: 5px;
+          font-weight: 500;
+        }
+        input {
+          width: 90%;
+          max-width: 250px;
+          box-sizing: border-box;
+          border: none;
+          background: #529D8C;
+          color: white;
+          padding: 7px 10px;
+          outline: none;
+          cursor: pointer;
+          transition: filter 250ms;
+          &:hover {
+            filter: brightness(1.2);
+          }
+        }
+        &.widget-calendar {
+          > div {
+            width: 90%;
+            max-width: 250px;
+            display: inline-block;
+          }
+        }
+      }
+      .widget-radio {
+        margin-top: 40px;
+        fieldset {
+          padding: 15px;
+          box-sizing: border-box;
+          span:not(:last-child) {
+            margin-right: 10px;
+          }
+          input {
+            display: none;
+            &:checked + label span {
+              background-color: $green;
+            }
+          }
+          label {
+            position: relative;
+            padding-left: 20px;
+            cursor: pointer;
+            span {
+              position: absolute;
+              left: 0;
+              top: 1px;
+              content: '';
+              background: white;
+              border-radius: 50%;
+              border: 3px solid $green;
+              width: 9px;
+              height: 9px;
+            }
+          }
+          legend {
+            color: $green;
+            text-transform: uppercase;
+            font-weight: 500;
+          }
+        }
+      }
+      .widget-explanation {
+        margin-top: 60px;
+        p {
+          text-align: center;
+          text-transform: uppercase;
+          font-weight: bold;
+          color: #666;
+        }
+      }
+      .widget-submit {
+        padding: 20px 40px;
+        clip-path: polygon(100% 0px, 99.69% 70.27%, 97.07% 98.49%, 0px 100%, 0px 0px);
+        button {
+          display: block;
+          width: 185px;
+          margin-left: auto;
+          padding: 5px;
+          border: none;
+          background: $green;
+          color: white;
+          text-transform: uppercase;
+          clip-path: polygon(100% 0px, 99.69% 70.27%, 95.99% 98.49%, 0px 100%, 0px 0px);
+          cursor: pointer;
+          transition: filter 250ms;
+          &:hover {
+            filter: brightness(1.2);
+          }
+        }
+      }
+    }
+  }
+}
+
 #zip-codes {
   display: none;
 }
@@ -260,16 +428,42 @@
   margin: 0 auto;
   .calculator-result-card {
     width: 31%;
+    border: 2px solid green;
+    margin: 60px 0;
     h3 {
+      margin-top: 0;
       background: $green;
       color: white;
-      padding: 25px 20px;
+      padding: 16px 18px;
       font-size: 20px;
+      font-weight: 500;
+    }
+    h4 {
+      padding: 0 20px;
+    }
+    ul {
+      padding: 0 20px;
+      li {
+        position: relative;
+        font-size: 14px;
+        padding-left: 20px;
+        &:before {
+          content: '»';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 10px;
+          height: 10px;
+          color: $green;
+        }
+      }
     }
     .tarif-button {
+      padding: 0 20px;
       a {
         background: $green;
         color: white;
+        margin: 10px 0;
         padding: 10px 40px;
         float: right;
         clip-path: polygon(100% 0px, 99.69% 70.27%, 92.87% 100.20%, 0px 100%, 0px 0px);
@@ -279,5 +473,54 @@
         }
       }
     }
+    .result-card-footer {
+      position: relative;
+      text-align: right;
+      padding: 0 20px;
+      .result-card-amount {
+        p {
+          margin-bottom: 0;
+          font-size: 15px;
+        }
+        span {
+          font-size: 17px;
+          color: $green;
+          font-weight: bold;
+        }
+      }
+      .result-card-layover {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        position: absolute;
+        top: -150%;
+        left: 0;
+        opacity: 0;
+        width: 100%;
+        height: 150%;
+        background: $green;
+        color: white;
+        z-index: 50;
+        transition: opacity 250ms;
+        p {
+          width: 100%;
+          font-size: 14px;
+          margin: 0;
+          text-align: center;
+          line-height: 1.7em;
+        }
+      }
+      &:hover {
+        .result-card-layover {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .vertrag-form-article .ce_form .formbody .widget-text label, .vertrag-form-article .ce_form .formbody .widget-select label {
+    text-align: left;
   }
 }
