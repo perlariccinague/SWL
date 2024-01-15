@@ -5,7 +5,7 @@
 
 
 <div class="box">
-    <a href="<?= $this->link ?>">
+    <a href="<?= $this->link ?>" target="_blank">
         <div class="box-inside">
             <h3><?= $this->titel ?></h3>
             <?php if($this->description !== ""): ?>

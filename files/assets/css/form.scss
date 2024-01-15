@@ -123,6 +123,16 @@
   }
 }
 
+fieldset {
+  border: none;
+}
+
+.radio_container {
+  > span {
+    display: block;
+  }
+}
+
 .privacy .formbody .widget-radio fieldset,
 .privacy .formbody .widget-checkbox fieldset {
   border: none;
