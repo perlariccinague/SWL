@@ -125,12 +125,19 @@
 
 fieldset {
   border: none;
+  &.no-padding {
+    padding: 0;
+  }
 }
 
 .radio_container {
   > span {
     display: block;
   }
+}
+
+.error {
+  color: red;
 }
 
 .privacy .formbody .widget-radio fieldset,

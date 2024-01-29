@@ -51,8 +51,11 @@ p {
 .pagination {
   ul {
     display: flex;
-    justify-content: space-between;
-    max-width: 100px;
+    justify-content: left;
+    gap: 20px;
+    li a {
+      color: $green;
+    }
   }
 }
 
