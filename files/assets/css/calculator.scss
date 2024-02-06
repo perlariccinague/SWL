@@ -137,6 +137,7 @@
     padding: 20px;
   }
   .widget-text {
+    height: 35px;
     padding: 20px;
     label {
       display: flex;
@@ -149,7 +150,9 @@
       width: 65px;
       outline: none;
       padding: 5px;
-      color: $green;
+      color: white;
+      background: #99c2b8;
+      border: none;
       &[type=number] {
         -moz-appearance: textfield;
         &::-webkit-outer-spin-button,&::-webkit-inner-spin-button {
@@ -218,6 +221,7 @@
     }
     &.flex {
       display: flex;
+      align-items: center;
       .widget-text {
         display: flex;
         width: 189px;
@@ -523,4 +527,60 @@
   .vertrag-form-article .ce_form .formbody .widget-text label, .vertrag-form-article .ce_form .formbody .widget-select label {
     text-align: left;
   }
+
+  #calculator .ce_tabcontrol {
+    flex-wrap: wrap;
+    .tabcontrol_tabs {
+      width: 100%;
+      ul li {
+        width: 50%;
+        height: 75px;
+      }
+    }
+  }
+
+  #household-number-icons {
+    width: 200px;
+    margin-top: 15px;
+  }
+
+  #calculator .ce_form {
+    height: auto;
+    fieldset.flex {
+      flex-wrap: wrap;
+      .widget-radio {
+        width: 100%;
+      }
+      .widget-text {
+        &:last-child {
+          padding: 0 15px;
+        }
+        &:first-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+    .widget-text.flex {
+      flex-wrap: wrap;
+    }
+    .widget-submit button {
+      margin-left: 0;
+    }
+  }
+
+  .radio_container > span {
+    display: inline-block;
+    margin: 5px 0;
+  }
+
+
+  /* layout.min.css,responsive.min.css,mobile-menu.min.css,fonts.scss...-500f9d0e.css | https://stadtwerke-leinefelde.de/assets/css/layout.min.css,responsive.min.css,mobile-menu.min.css,fonts.scss...-500f9d0e.css */
+
+  .calculator-results {
+    flex-wrap: wrap;
+    .calculator-result-card {
+      width: 100%;
+    }
+  }
+
 }
