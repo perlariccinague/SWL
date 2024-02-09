@@ -209,6 +209,21 @@ textarea {
   }
 }
 
+cms-cookie-bar > cms-container form cms-buttons cms-button[value="accept"]:nth-last-of-type(1) > span:before,
+cms-accept-tags > cms-container form cms-buttons cms-button[value="accept"]:nth-last-of-type(1) > span:before {
+  background: $green !important;
+}
+
+cms-cookie-bar, cms-accept-tags {
+  --btn-accept-bg-color: #00664FFF !important;
+}
+
+.ce_optin_fallback {
+  p a {
+    color: $green;
+  }
+}
+
 @media screen and (max-width: 1100px) {
   .privacy .formbody .widget-text,  .privacy .formbody .widget-textarea {
     input, textarea {
