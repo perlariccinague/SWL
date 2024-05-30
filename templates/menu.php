@@ -32,7 +32,7 @@
     <div>
         <a href="{{link_url::17}}"><h2>Service</h2></a>
         {{insert_module::16}}
-    </div>
+    </div><!--
     <div>
         <a href="{{link_url::18}}"><h2>Netzbetrieb</h2></a>
         {{insert_module::17}}
@@ -40,7 +40,7 @@
     <div>
         <a href="{{link_url::19}}"><h2>Rückrufservice</h2></a>
         {{insert_module::18}}
-    </div>
+    </div>-->
 </div>
 
 
